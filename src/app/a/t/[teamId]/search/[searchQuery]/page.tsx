@@ -5,7 +5,7 @@ import { findArticles } from "@/functions/article";
 import { log } from "console";
 import Link from "next/link";
 
-async function page({ params }) {
+async function SearchResultPage({ params }) {
   const searchQuery = params.searchQuery;
   const teamId = params.teamId;
   const articleData = await findArticles(searchQuery, teamId);
@@ -39,4 +39,4 @@ async function page({ params }) {
   );
 }
 
-export default page;
+export default SearchResultPage;

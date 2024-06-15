@@ -6,7 +6,7 @@ import prisma from "@/lib/prisma";
 import TasksBody from "./TasksBody";
 import { isUserModer } from "@/lib/utils";
 
-async function Page({ params }) {
+async function TasksPage({ params }) {
   const user = await auth();
   const team = await prisma.team.findUnique({
     where: {
@@ -38,4 +38,4 @@ async function Page({ params }) {
   );
 }
 
-export default Page;
+export default TasksPage;

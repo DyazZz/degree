@@ -2,7 +2,7 @@ import { auth } from "@/auth";
 import prisma from "@/lib/prisma";
 import { redirect } from "next/navigation";
 
-async function Page({ params }) {
+async function JoinTeamPage({ params }) {
   const team = await prisma.team.findUnique({
     where: {
       invitation: params.inviteId,
@@ -37,4 +37,4 @@ async function Page({ params }) {
   } else return <div>Команда не найдена</div>;
 }
 
-export default Page;
+export default JoinTeamPage;

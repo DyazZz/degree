@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import prisma from "@/lib/prisma";
 import UsersList from "../UsersList";
 
-async function Page({ params }) {
+async function TeamManagePage({ params }) {
   const team = await prisma.team.findUnique({
     where: {
       id: params.teamId,
@@ -37,4 +37,4 @@ async function Page({ params }) {
   );
 }
 
-export default Page;
+export default TeamManagePage;

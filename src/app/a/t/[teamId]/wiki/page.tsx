@@ -9,7 +9,7 @@ import { log } from "console";
 import { cookies } from "next/headers";
 import Link from "next/link";
 
-async function Page({ params }) {
+async function WikiPage({ params }) {
   const session = await auth();
   const isDevMode = await isUserModer(session!, params.teamId);
 
@@ -45,4 +45,4 @@ async function Page({ params }) {
   );
 }
 
-export default Page;
+export default WikiPage;

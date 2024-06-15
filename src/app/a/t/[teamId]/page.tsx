@@ -5,7 +5,7 @@ import { log } from "console";
 import UsersList from "./UsersList";
 import H2 from "@/components/H2";
 
-async function Page({ params }) {
+async function TeamPage({ params }) {
   const team = await prisma.team.findUnique({
     where: {
       id: params.teamId,
@@ -29,4 +29,4 @@ async function Page({ params }) {
   );
 }
 
-export default Page;
+export default TeamPage;

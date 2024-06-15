@@ -7,7 +7,7 @@ import { cookies } from "next/headers";
 
 export const fetchCache = "force-no-store";
 
-async function Page({ params }) {
+async function ArticlePage({ params }) {
   const session = await auth();
   const isDevMode = await isUserModer(session!, params.teamId);
   const articleId = Number(params.articleId);
@@ -27,4 +27,4 @@ async function Page({ params }) {
   );
 }
 
-export default Page;
+export default ArticlePage;

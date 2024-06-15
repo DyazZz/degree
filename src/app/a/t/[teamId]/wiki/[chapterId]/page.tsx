@@ -8,7 +8,7 @@ import prisma from "@/lib/prisma";
 import { isUserModer } from "@/lib/utils";
 import Link from "next/link";
 
-async function Page({ params }) {
+async function ChapterPage({ params }) {
   const session = await auth();
   const isDevMode = await isUserModer(session!, params.teamId);
   const chapterId = Number(params.chapterId);
@@ -55,4 +55,4 @@ async function Page({ params }) {
   );
 }
 
-export default Page;
+export default ChapterPage;

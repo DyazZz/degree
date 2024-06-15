@@ -46,7 +46,7 @@ function TeamList({ teams }: { teams: Team[] }) {
         {teams.map((team) => {
           return (
             <Card key={team.id} className="w-1/3">
-              <Link href={`/app/t/${team.id}`}>
+              <Link href={`/a/t/${team.id}`}>
                 <CardHeader>{team.name}</CardHeader>
                 <CardContent>
                   <p>{team.description}</p>
