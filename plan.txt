@@ -1,0 +1,6 @@
+1) .env добавить сикрет
+2) auth.ts
+3) route.ts
+4) middleware.ts
+
+revalidatePath("/")
